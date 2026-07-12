@@ -1,8 +1,21 @@
-[return to index](https://released.github.io/)
+[回到知識庫總索引](https://released.github.io/)
 
 <a id="article_top"></a>
 
 # RH850/F1KM memory map
+
+> 整理 RH850/F1KM-S1 不同 Flash 容量下的 local RAM、retention RAM、self area 與 bus-master view，協助 linker 配置、DMA buffer 與存取保護除錯。
+
+## 位址判讀流程
+
+```mermaid
+flowchart LR
+    DEVICE["確認 F1KM 型號與 Flash 容量"] --> VIEW["確認 CPU / DMA Bus Master"]
+    VIEW --> AREA["選擇 Local / Retention / Self Area"]
+    AREA --> LINKER["設定 Linker Section"]
+    LINKER --> GUARD["檢查 PEG / Access Protection"]
+    GUARD --> VERIFY["Map File 與 Debugger 驗證"]
+```
 
 ## Agenda
 
