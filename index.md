@@ -30,19 +30,21 @@ flowchart LR
 
 CPU1 view：
 
+下列表格的 `Size` 以 `end address - start address + 1` 計算；`1 KB = 1024 bytes`。
+
 | FLASH | LOCAL RAM (CPU1) | RETENTION RAM (CPU1) |
 |---:|---|---|
-| 512K | `0xFEBF0000 ~ 0xFEBF7FFF` | `0xFEBF8000 ~ 0xFEBFFFFF` |
-| 768K | `0xFEBE8000 ~ 0xFEBF7FFF` | `0xFEBF8000 ~ 0xFEBFFFFF` |
-| 1MB | `0xFEBE0000 ~ 0xFEBF7FFF` | `0xFEBF8000 ~ 0xFEBFFFFF` |
+| 512K | `0xFEBF0000 ~ 0xFEBF7FFF`<br><small>Size: 32 KB</small> | `0xFEBF8000 ~ 0xFEBFFFFF`<br><small>Size: 32 KB</small> |
+| 768K | `0xFEBE8000 ~ 0xFEBF7FFF`<br><small>Size: 64 KB</small> | `0xFEBF8000 ~ 0xFEBFFFFF`<br><small>Size: 32 KB</small> |
+| 1MB | `0xFEBE0000 ~ 0xFEBF7FFF`<br><small>Size: 96 KB</small> | `0xFEBF8000 ~ 0xFEBFFFFF`<br><small>Size: 32 KB</small> |
 
 SELF view：
 
 | FLASH | LOCAL RAM (SELF) | RETENTION RAM (SELF) |
 |---:|---|---|
-| 512K | `0xFEDF0000 ~ 0xFEDF7FFF` | `0xFEDF8000 ~ 0xFEDFFFFF` |
-| 768K | `0xFEDE8000 ~ 0xFEDF7FFF` | `0xFEDF8000 ~ 0xFEDFFFFF` |
-| 1MB | `0xFEDE0000 ~ 0xFEDF7FFF` | `0xFEDF8000 ~ 0xFEDFFFFF` |
+| 512K | `0xFEDF0000 ~ 0xFEDF7FFF`<br><small>Size: 32 KB</small> | `0xFEDF8000 ~ 0xFEDFFFFF`<br><small>Size: 32 KB</small> |
+| 768K | `0xFEDE8000 ~ 0xFEDF7FFF`<br><small>Size: 64 KB</small> | `0xFEDF8000 ~ 0xFEDFFFFF`<br><small>Size: 32 KB</small> |
+| 1MB | `0xFEDE0000 ~ 0xFEDF7FFF`<br><small>Size: 96 KB</small> | `0xFEDF8000 ~ 0xFEDFFFFF`<br><small>Size: 32 KB</small> |
 
 ### Memory map + Product lineup memo
 
@@ -84,11 +86,11 @@ RAM configuration：
 
 | Code Flash | LOCAL RAM (CPU1) | RETENTION RAM (Bank B) | LOCAL RAM (SELF) |
 |---:|---|---|---|
-| 2MB | `0xFEBE0000 ~ 0xFEBFFFFF` | `0xFEF08000 ~ 0xFEF0FFFF` | `0xFEDE0000 ~ 0xFEDFFFFF` |
+| 2MB | `0xFEBE0000 ~ 0xFEBFFFFF`<br><small>Size: 128 KB</small> | `0xFEF08000 ~ 0xFEF0FFFF`<br><small>Size: 32 KB</small> | `0xFEDE0000 ~ 0xFEDFFFFF`<br><small>Size: 128 KB</small> |
 
 | Code Flash | GLOBAL RAM (Bank A) | GLOBAL RAM (Bank B) |
 |---:|---|---|
-| 2MB | `0xFEEF4000 ~ 0xFEEFFFFF` | `0xFEFF4000 ~ 0xFEFFFFFF` |
+| 2MB | `0xFEEF4000 ~ 0xFEEFFFFF`<br><small>Size: 48 KB</small> | `0xFEFF4000 ~ 0xFEFFFFFF`<br><small>Size: 48 KB</small> |
 
 Product lineup：
 
@@ -108,13 +110,13 @@ RAM configuration：
 
 | Code Flash | LOCAL RAM (CPU1) | RETENTION RAM (Bank B) | LOCAL RAM (SELF) |
 |---:|---|---|---|
-| 3MB | `0xFEBD0000 ~ 0xFEBFFFFF` | `0xFEF00000 ~ 0xFEF0FFFF` | `0xFEDD0000 ~ 0xFEDFFFFF` |
-| 4MB | `0xFEBC0000 ~ 0xFEBFFFFF` | `0xFEF00000 ~ 0xFEF0FFFF` | `0xFEDC0000 ~ 0xFEDFFFFF` |
+| 3MB | `0xFEBD0000 ~ 0xFEBFFFFF`<br><small>Size: 192 KB</small> | `0xFEF00000 ~ 0xFEF0FFFF`<br><small>Size: 64 KB</small> | `0xFEDD0000 ~ 0xFEDFFFFF`<br><small>Size: 192 KB</small> |
+| 4MB | `0xFEBC0000 ~ 0xFEBFFFFF`<br><small>Size: 256 KB</small> | `0xFEF00000 ~ 0xFEF0FFFF`<br><small>Size: 64 KB</small> | `0xFEDC0000 ~ 0xFEDFFFFF`<br><small>Size: 256 KB</small> |
 
 | Code Flash | GLOBAL RAM (Bank A) | GLOBAL RAM (Bank B) |
 |---:|---|---|
-| 3MB | `0xFEEF0000 ~ 0xFEEFFFFF` | `0xFEFF0000 ~ 0xFEFFFFFF` |
-| 4MB | `0xFEEE8000 ~ 0xFEEFFFFF` | `0xFEFE8000 ~ 0xFEFFFFFF` |
+| 3MB | `0xFEEF0000 ~ 0xFEEFFFFF`<br><small>Size: 64 KB</small> | `0xFEFF0000 ~ 0xFEFFFFFF`<br><small>Size: 64 KB</small> |
+| 4MB | `0xFEEE8000 ~ 0xFEEFFFFF`<br><small>Size: 96 KB</small> | `0xFEFE8000 ~ 0xFEFFFFFF`<br><small>Size: 96 KB</small> |
 
 Product lineup：
 
@@ -141,13 +143,13 @@ RAM configuration：
 
 | Code Flash | LOCAL RAM (CPU1) | LOCAL RAM (CPU2) | RETENTION RAM (Bank B) |
 |---:|---|---|---|
-| 6MB | `0xFEBD8000 ~ 0xFEBFFFFF` | `0xFEDD8000 ~ 0xFEDFFFFF` | `0xFEF00000 ~ 0xFEF0FFFF` |
-| 8MB | `0xFEBD0000 ~ 0xFEBFFFFF` | `0xFEDD0000 ~ 0xFEDFFFFF` | `0xFEF00000 ~ 0xFEF0FFFF` |
+| 6MB | `0xFEBD8000 ~ 0xFEBFFFFF`<br><small>Size: 160 KB</small> | `0xFEDD8000 ~ 0xFEDFFFFF`<br><small>Size: 160 KB</small> | `0xFEF00000 ~ 0xFEF0FFFF`<br><small>Size: 64 KB</small> |
+| 8MB | `0xFEBD0000 ~ 0xFEBFFFFF`<br><small>Size: 192 KB</small> | `0xFEDD0000 ~ 0xFEDFFFFF`<br><small>Size: 192 KB</small> | `0xFEF00000 ~ 0xFEF0FFFF`<br><small>Size: 64 KB</small> |
 
 | Code Flash | GLOBAL RAM (Bank A) | GLOBAL RAM (Bank B) |
 |---:|---|---|
-| 6MB | `0xFEEC0000 ~ 0xFEEFFFFF` | `0xFEFC0000 ~ 0xFEFFFFFF` |
-| 8MB | `0xFEEB8000 ~ 0xFEEFFFFF` | `0xFEFB8000 ~ 0xFEFFFFFF` |
+| 6MB | `0xFEEC0000 ~ 0xFEEFFFFF`<br><small>Size: 256 KB</small> | `0xFEFC0000 ~ 0xFEFFFFFF`<br><small>Size: 256 KB</small> |
+| 8MB | `0xFEEB8000 ~ 0xFEEFFFFF`<br><small>Size: 288 KB</small> | `0xFEFB8000 ~ 0xFEFFFFFF`<br><small>Size: 288 KB</small> |
 
 Product lineup：
 
