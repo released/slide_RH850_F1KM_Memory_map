@@ -26,7 +26,7 @@ flowchart LR
 
 ## Memory map (RH850/F1KM-S1)
 
-![](img/Memory_Map_F1KM_S1.jpg)
+![Memory map (RH850/F1KM-S1) — Memory Map F1KM S1](img/Memory_Map_F1KM_S1.jpg)
 
 CPU1 view：
 
@@ -55,11 +55,11 @@ Source:
 
 #### F1KM-S1
 
-![](img/Memory_Map_F1KM_S1.jpg)
+![F1KM-S1 — Memory Map F1KM S1](img/Memory_Map_F1KM_S1.jpg)
 
-![](img/Product_Lineup_F1KM_S1.jpg)
+![F1KM-S1 — Product Lineup F1KM S1](img/Product_Lineup_F1KM_S1.jpg)
 
-RAM 位址依 Code Flash 容量變化，請對照本節前方的 Memory map 表。Part Name 另依 pin count 與溫度等級列示：
+RAM 位址依 Code Flash 容量變化，對照資料列於本節前方的 Memory map 表。Part Name 另依 pin count 與溫度等級列示：
 
 | Pin count | Code Flash | 105°C Part Name | 125°C Part Name |
 |---:|---:|---|---|
@@ -78,9 +78,9 @@ RAM 位址依 Code Flash 容量變化，請對照本節前方的 Memory map 表�
 
 #### F1KM-S2
 
-![](img/Memory_Map_F1KM_S2.jpg)
+![F1KM-S2 — Memory Map F1KM S2](img/Memory_Map_F1KM_S2.jpg)
 
-![](img/Product_Lineup_F1KM_S2.jpg)
+![F1KM-S2 — Product Lineup F1KM S2](img/Product_Lineup_F1KM_S2.jpg)
 
 RAM configuration：
 
@@ -102,9 +102,9 @@ Product lineup：
 
 #### F1KM-S4
 
-![](img/Memory_Map_F1KM_S4.jpg)
+![F1KM-S4 — Memory Map F1KM S4](img/Memory_Map_F1KM_S4.jpg)
 
-![](img/Product_Lineup_F1KM_S4.jpg)
+![F1KM-S4 — Product Lineup F1KM S4](img/Product_Lineup_F1KM_S4.jpg)
 
 RAM configuration：
 
@@ -135,9 +135,9 @@ Product lineup：
 
 #### F1KH-D8
 
-![](img/Memory_Map_F1KH_D8.jpg)
+![F1KH-D8 — Memory Map F1KH D8](img/Memory_Map_F1KH_D8.jpg)
 
-![](img/Product_Lineup_F1KH_D8.jpg)
+![F1KH-D8 — Product Lineup F1KH D8](img/Product_Lineup_F1KH_D8.jpg)
 
 RAM configuration：
 
@@ -164,11 +164,11 @@ Product lineup：
 
 CPU1 area vs Self area
 
-![](img/CPU1_area_Self_area_RH850_F1KM_S1.jpg)
+![RH850/F1KM-S1 CPU1 and Self RAM address views](img/CPU1_area_Self_area_RH850_F1KM_S1.jpg)
 
 DMA access area (only allow access __CPU1 area__)
 
-![](img/Address_Space_Viewed_from_Bus_Master_S1_1M_1.jpg)
+![RH850/F1KM-S1 address space viewed from a bus master](img/Address_Space_Viewed_from_Bus_Master_S1_1M_1.jpg)
 
 [back to top](#article_top)
 
